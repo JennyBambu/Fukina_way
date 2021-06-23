@@ -1,0 +1,83 @@
+.about {
+  background-color: $background-main;
+  background-image: url("../../img/main-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $color-base;
+  min-height: 861px;
+  margin-bottom: 200px;
+
+  @media (max-width: 1023px) {
+    min-height: 344px;
+    background-image: url("../../img/main-background-medium.jpg");
+    margin-bottom: 81px;
+  }
+
+  @media (max-width: 767px) {
+    min-height: unset;
+    background-image: linear-gradient(transparent 235px, $color-base 180px), url("../../img/main-background-small@2x.jpg");
+    background-size: auto auto, cover, auto;
+    margin-bottom: 109px;
+  }
+}
+
+.about__container {
+  max-width: 1210px;
+  margin: 0 auto;
+
+  @media (max-width: 1023px) {
+    max-width: unset;
+  }
+}
+
+.about__wrapper {
+  padding-top: 147px;
+  max-width: 412px;
+  margin-left: auto;
+  margin-right: 78px;
+
+  @media (max-width: 1023px) {
+    padding-top: 40px;
+    margin: 0 auto;
+    max-width: 398px;
+    text-align: center;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 65px;
+    max-width: 294px;
+  }
+}
+
+.about__title {
+  @include title-second-level;
+
+  margin-bottom: 26px;
+  letter-spacing: -1.10667px;
+
+  @media (max-width: 1023px) {
+    margin-bottom: 10px;
+    letter-spacing: normal;
+    text-align: center;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 102px;
+  }
+}
+
+.about__description {
+  max-width: 360px;
+  margin-bottom: 34px;
+
+  @media (max-width: 1023px) {
+    max-width: 398px;
+    margin-bottom: 9px;
+    margin-top: 15px;
+  }
+
+  @media (max-width: 767px) {
+    color: $color-text-base;
+    margin-bottom: 19px;
+  }
+}

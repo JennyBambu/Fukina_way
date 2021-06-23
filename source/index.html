@@ -4,101 +4,195 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Стартовый шаблон</title>
+    <title>Путешествие по Европе с WAY</title>
     <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" crossorigin>
     <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" crossorigin>
     <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" crossorigin>
     <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" crossorigin>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body>
-    <header>
-      <nav class="main-nav">
-        <ul class="main-nav__list main-nav__list--index">
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--index main-nav__link--active">О путешествии</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--index" href="catalog.html">Цены</a>
-          </li>
-        </ul>
-      </nav>
+  <body class="page__body">
+    <header class="header">
+      <div class="header__wrapper">
+        <img class="header__logo" src="img/logo.svg" width="57" height="22" alt="Логотип сайта Way">
+        <nav class="main-nav main-nav--nojs">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link">О путешествии</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link">Цены</a>
+            </li>
+          </ul>
+        </nav>
 
-      <div>
-        <a href="tel:+749978468446"><p>+7 (499) -784-684-46</p></a>
+        <button class="header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+
+        <p class="phone phone--header">
+          <a href="tel:+749978468446"></a>+7 (499) -784-684-46</a>
+        </p>
       </div>
     </header>
 
   <main>
-    <div>
-      <h2>Путешествие по Европе</h2>
-      <p>В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
-      <button>cмотреть тур</button>
+    <div class="about">
+      <div class="about__container">
+        <div class="about__wrapper">
+          <h1 class="about__title">Путешествие по Европе</h1>
+          <p class="about__description">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
+          <a class="button">
+            <span>cмотреть тур</span>
+          </a>
+        </div>
+      </div>
     </div>
 
-    <div>
-      <h2>Места посещения</h2>
-      <p>Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
-      <ul>
-        <li>Греция</li>
-        <li>Албания</li>
-        <li>Македония</li>
-        <li>Черногория</li>
-        <li>Хорватия</li>
-      </ul>
+    <div class="places">
+      <div class="places__wrapper">
+        <h2 class="places__title">Места посещения</h2>
+        <p class="places__description">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
+        <ul class="places__list">
+          <li class="places__item">
+            <figure class="places__card">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/greece.webp, img/greece@2x.webp 2x">
+                <source type="image/webp" srcset="img/greece-big.webp, img/greece-big@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/greece.jpg, img/greece@2x.jpg 2x">
+                <img class="places__image" src="img/greece-big.jpg" srcset="img/greece-big@2x.jpg 2x" width="350" height="430" alt="Изображение гор в Греции">
+              </picture>
+              <figcaption class="places__card-title">Греция</figcaption>
+            </figure>
+            <a class="places__link" href=""></a>
+          </li>
+          <li class="places__item">
+            <figure class="places__card">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/albania.webp, img/albania@2x.webp 2x">
+                <source type="image/webp" srcset="img/albania.webp, img/albania@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/albania.jpg, img/albania@2x.jpg 2x">
+                <img class="places__image" src="img/albania-big.jpg" srcset="img/albania-big@2x.jpg 2x" width="350" height="430" alt="Изображение прибрежного города в бухте">
+              </picture>
+              <figcaption class="places__card-title">Албания</figcaption>
+            </figure>
+            <a class="places__link" href=""></a>
+          </li>
+          <li class="places__item">
+            <figure class="places__card">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/macedonia.webp, img/macedonia@2x.webp 2x">
+                <source type="image/webp" srcset="img/macedonia-big.webp, img/macedonia-big@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/macedonia.jpg, img/macedonia@2x.jpg 2x">
+                <img class="places__image" src="img/macedonia-big.jpg" srcset="img/macedonia-big@2x.jpg 2x" width="350" height="430" alt="Изображение монастыря у побережья">
+              </picture>
+              <figcaption class="places__card-title">Македония</figcaption>
+            </figure>
+            <a class="places__link" href=""></a>
+          </li>
+          <li class="places__item">
+            <figure class="places__card">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/montenegro.webp, img/montenegro@2x.webp 2x">
+                <source type="image/webp" srcset="img/montenegro-big.webp, img/montenegro-big@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/montenegro.jpg, img/montenegro@2x.jpg 2x">
+                <img class="places__image" src="img/montenegro-big.jpg" srcset="img/montenegro-big@2x.jpg 2x" width="350" height="430" alt="Изоюражение долтны реки в лесу">
+              </picture>
+              <figcaption class="places__card-title">Черногория</figcaption>
+            </figure>
+            <a class="places__link" href=""></a>
+          </li>
+          <li class="places__item">
+            <figure class="places__card">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/сroatia.webp, img/сroatia@2x.webp 2x">
+                <source type="image/webp" srcset="img/сroatia-big.webp, img/сroatia-big@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/сroatia.jpg, img/сroatia@2x.jpg 2x">
+                <img class="places__image" src="img/сroatia-big.jpg" srcset="img/сroatia-big@2x.jpg 2x" width="350" height="430" alt="Изображение сталактитов в пещере">
+              </picture>
+              <figcaption class="places__card-title">Хорватия</figcaption>
+            </figure>
+            <a class="places__link" href=""></a>
+          </li>
+        </ul>
+      </div>
     </div>
 
-  <section>
-        <article>
-          <h2>Греция</h2>
-          <p>На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.</p>
+  <section class="tabs">
+    <div class="tabs__container">
+    <div class="tabs__list">
+      <a href="#tab-1" class="tabs__item active" data-tab-name="tab-1">Греция</a>
+      <a href="#tab-2" class="tabs__item" data-tab-name="tab-2">Албания</a>
+      <a href="#tab-3" class="tabs__item" data-tab-name="tab-3">Македония</a>
+      <a href="#tab-4" class="tabs__item" data-tab-name="tab-4">Черногория</a>
+      <a href="#tab-5" class="tabs__item" data-tab-name="tab-5">Хорватия</a>
+    </div>
+
+    <div class="tabs__slides">
+      <article class="tabs__slide active">
+        <div class="tabs__slide-description">
+          <h2 class="tabs__slide-title">Греция</h2>
+          <p class="tabs__slide-text">На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.</p>
           <a href="">купить тур сейчас</a>
-          <article>
-            <h3>Отзывы</h3>
-            <p>Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света! </p>
-            <h4>Влада Голицина</h4>
-          </article>
+        </div>
+        <article>
+          <h3>Отзывы</h3>
+          <p>Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света! </p>
+          <h4>Влада Голицина</h4>
         </article>
-        <article>
-          <h2>Албания</h2>
-          <p>В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния.</p>
-          <a href="">купить тур сейчас</a>
-          <article>
+      </article>
+
+      <article class="tabs__slide">
+          <div class="tabs__slide-description">
+            <h2 class="tabs__slide-title">Албания</h2>
+            <p>В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния.</p>
+            <a href="">купить тур сейчас</a>
+          </div>
+          <article class="tabs__slide">
             <h3>Отзывы</h3>
             <p>Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с собой сестру, чтобы тоже смогла вкусить все красоты природы :)</p>
             <h4>Маришка</h4>
           </article>
-        </article>
-        <article>
-          <h2>Македония</h2>
-          <p>В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен где находится  археологический памятник Кокино в длину около 100 метров.</p>
-          <a href="">купить тур сейчас</a>
+      </article>
+
+      <article class="tabs__slide">
+          <div class="tabs__slide-description">
+            <h2 class="tabs__slide-title">Македония</h2>
+            <p>В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен где находится  археологический памятник Кокино в длину около 100 метров.</p>
+            <a href="">купить тур сейчас</a>
+          </div>
           <article>
             <h3>Отзывы</h3>
             <p>Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила, особенно после долгого пути в гору.</p>
             <h4>Михаил Кузьмин</h4>
           </article>
-        </article>
-        <article>
-          <h2>Черногория</h2>
-          <p>Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км.</p>
-          <a href="">купить тур сейчас</a>
+      </article>
+
+      <article class="tabs__slide">
+          <div class="tabs__slide-description">
+            <h2 class="tabs__slide-title">Черногория</h2>
+            <p>Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км.</p>
+            <a href="">купить тур сейчас</a>
+          </div>
           <article>
             <h3>Отзывы</h3>
             <p>Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в фильмах :) Всем советую</p>
             <h4>Анастасия Мей</h4>
           </article>
-        </article>
-        <article>
-          <h2>Хорватия</h2>
-          <p>В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —  сталактитами и сталагмитами —  формировавшимися тысячи и тысячи лет.</p>
-          <a href="">купить тур сейчас</a>
+      </article>
+
+      <article class="tabs__slide">
+          <div class="tabs__slide-description">
+            <h2 class="tabs__slide-title">Хорватия</h2>
+            <p>В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —  сталактитами и сталагмитами —  формировавшимися тысячи и тысячи лет.</p>
+            <a href="">купить тур сейчас</a>
+          </div>
           <article>
             <h3>Отзывы</h3>
             <p>Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни с чем не спутать по итогу :)</p>
             <h4>Владимир Мулицин</h4>
           </article>
-        </article>
+      </article>
+      </div>
+      </div>
   </section>
 
   <section>
@@ -152,47 +246,49 @@
     <button>отправить</button>
   </div>
 
-    <h1>Добро пожаловать в Лигу А.</h1>
   </main>
 
-  <footer>
-    <div>
-      <h3>Следующие путешествия</h3>
-      <ul>
-        <li>Марсель</li>
-        <li>Ним</li>
-        <li>Монпелье</li>
-        <li>Барселона</li>
-        <li>Пальма</li>
-      </ul>
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__travels">
+        <h3 class="footer__travels-title">Следующие путешествия</h3>
+        <ul class="footer__travels-list">
+          <li class="footer__travels-item">Марсель</li>
+          <li class="footer__travels-item">Ним</li>
+          <li class="footer__travels-item">Монпелье</li>
+          <li class="footer__travels-item">Барселона</li>
+          <li class="footer__travels-item">Пальма</li>
+        </ul>
 
-      <ul>
-        <li>Сардиния</li>
-        <li>Палермо</li>
-        <li>Катания</li>
-        <li>Неаполь</li>
-        <li>Рим</li>
-      </ul>
+        <ul class="footer__travels-list">
+          <li class="footer__travels-item">Сардиния</li>
+          <li class="footer__travels-item">Палермо</li>
+          <li class="footer__travels-item">Катания</li>
+          <li class="footer__travels-item">Неаполь</li>
+          <li class="footer__travels-item">Рим</li>
+        </ul>
 
-      <ul>
-        <li>Корс</li>
-        <li>Ницца</li>
-        <li>Монако</li>
-        <li>Динь-ле-Бен</li>
-        <li>Гренобль</li>
-      </ul>
-    </div>
+        <ul class="footer__travels-list">
+          <li class="footer__travels-item">Корс</li>
+          <li class="footer__travels-item">Ницца</li>
+          <li class="footer__travels-item">Монако</li>
+          <li class="footer__travels-item">Динь-ле-Бен</li>
+          <li class="footer__travels-item">Гренобль</li>
+        </ul>
+      </div>
 
-    <div>
-      <h2>Наши контакты</h2>
-      <a href=""><p>puteshestviemechta@gmail.ru</p></a>
-      <a href="tel:+749978468446"><p>+7 (499) -784-684-46</p></a>
-    </div>
+      <div class="footer__contacts">
+        <h3 class="footer__contacts__title">Наши контакты</h3>
+        <a href=""><p>puteshestviemechta@gmail.ru</p></a>
+        <a href="tel:+749978468446"><p>+7 (499) -784-684-46</p></a>
+      </div>
 
-    <div>
-      <h2>Корпоративные путешествия</h2>
-      <p>Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию, помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением</p>
+      <div class="footer__offer">
+        <h3 class="footer__offer-title">Корпоративные путешествия</h3>
+        <p class="footer__offer-description">Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию, помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением</p>
+      </div>
     </div>
   </footer>
+  <script src="js/script.min.js"></script>
   </body>
 </html>

@@ -18,18 +18,18 @@ const sync = require("browser-sync").create();
 
 const styles = () => {
   return gulp.src("source/sass/style.scss")
-    .pipe(plumber()) //ошибки
+    .pipe(plumber())
     .pipe(sourcemap.init())
-    .pipe(sass()) //sass -> css
+    .pipe(sass())
     .pipe(postcss([
-      autoprefixer(),  //css -webkit
-      csso() //css 1/ghghfjhjkhkjghjkhfgfgh
+      autoprefixer(),
+      csso()
     ]))
 
-    .pipe(rename("style.min.css")) //минификация
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css")) //кладется в папку
-    .pipe(sync.stream()); // обновление
+    .pipe(gulp.dest("build/css"))
+    .pipe(sync.stream());
 }
 
 exports.styles = styles;

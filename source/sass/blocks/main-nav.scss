@@ -1,0 +1,22 @@
+.main-nav {
+  display: flex;
+}
+
+.main-nav__list {
+  @include lists-base;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 41px;
+  margin-left: auto;
+  padding-top: 2px;
+  letter-spacing: normal;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    margin-top: 82px;
+    margin-bottom: 60px;
+    flex-grow: 1;
+  }
+}
+

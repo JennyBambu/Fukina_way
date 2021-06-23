@@ -1,0 +1,20 @@
+.phone {
+  font-size: 18px;
+  margin: 0;
+  padding-right: 14px;
+  padding-left: 40px;
+  background-image: url("../../img/icon.svg");
+  background-repeat: no-repeat;
+  background-position: 5px 3px;
+  letter-spacing: normal;
+
+  &:hover {
+    color: $color-accent;
+  }
+
+  &--header {
+    @media (max-width: 1023px) {
+      display: none;
+    }
+  }
+}
